@@ -1,0 +1,79 @@
+/* Full-screen 360 viewer container */
+.destination-360 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* The 360 panorama viewer canvas area */
+.panorama-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000; /* fallback background in case image fails */
+}
+
+/* The UI overlay for mission info and return button */
+.mission-ui {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #00ffff;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 2;
+  max-width: 90%;
+  backdrop-filter: blur(4px);
+}
+
+.mission-ui h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.mission-ui p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #b2ffff;
+}
+
+/* Description styling */
+.image-description {
+  font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+  color: #c0f0ff;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Image selection buttons */
+.image-selector {
+  margin-bottom: 1rem;
+}
+
+.image-selector button {
+  margin: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid #00ffff;
+  background: transparent;
+  color: #00ffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.image-selector button:hover {
+  background: #00ffff;
+  color: #000;
+}

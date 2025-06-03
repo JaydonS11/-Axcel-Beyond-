@@ -1,0 +1,22 @@
+/* src/pages/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #0a0a0a;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,64 @@
+.mission-page {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.mission-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0);
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  border-color: #00ff88;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+}
+
+.mission-card.completed {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.mission-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.mission-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.mission-card button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #00ff88;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+
+.mission-card button:hover {
+  background: #00cc6f;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
+}

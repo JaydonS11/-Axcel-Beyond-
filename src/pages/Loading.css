@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 9999;
+}
+
+.warp-text {
+  z-index: 3;
+  font-size: 1.75rem;
+  color: #00ffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  }
+}
+
+.warp-tunnel {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, #00ffff 0%, #000 60%);
+  animation: tunnelZoom 3s linear forwards;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+@keyframes tunnelZoom {
+  0% {
+    transform: scale(0.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+/* Starfield background */
+.stars {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-radial-gradient(#00ffff 0 1px, transparent 2px 100px);
+  animation: starDrift 8s linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes starDrift {
+  0% {
+    transform: translate(-10%, -10%) scale(1);
+  }
+  100% {
+    transform: translate(10%, 10%) scale(1.5);
+  }
+}

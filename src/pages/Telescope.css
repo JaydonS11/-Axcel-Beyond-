@@ -1,0 +1,71 @@
+.telescope-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000010, #000000);
+  color: #00ffcc;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.telescope-container h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.telescope-container p {
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  margin-bottom: 2rem;
+}
+
+.telescope-view {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewport-placeholder {
+  width: 90%;
+  max-width: 400px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px dashed #00ffcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffffaa;
+}
+
+.destination-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.planet-button {
+  background: rgba(0, 255, 204, 0.1);
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  min-width: 120px;
+}
+
+.planet-button:hover {
+  background: #00ffcc;
+  color: #000;
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 0 10px #00ffcc;
+}

@@ -1,0 +1,53 @@
+.mission-tracker {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffe7;
+  padding: 1.5rem;
+  border-radius: 16px;
+  color: #fff;
+  max-width: 700px;
+  margin: 2rem auto;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.3);
+}
+
+.mission-tracker h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00ffe7;
+  letter-spacing: 1px;
+}
+
+.planet-progress {
+  margin-bottom: 2rem;
+}
+
+.planet-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffff66;
+}
+
+.view-status {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #000;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffe7, #00ff99);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}

@@ -1,0 +1,111 @@
+.tracker-page {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.tracker-page h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ffffaa, 0 0 10px #00ccffaa;
+}
+
+.tracker-page p {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.planet-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.planet-card {
+  background: rgba(0, 255, 255, 0.03);
+  border: 1px solid #00ffff33;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.planet-card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00ffff11 0%, transparent 60%);
+  animation: pulseGlow 6s infinite linear;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.planet-card h2 {
+  position: relative;
+  margin: 0 0 1rem 0;
+  color: #00ffff;
+  font-size: 1.4rem;
+  z-index: 1;
+}
+
+.mission-tile,
+.view-completed {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #444;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  color: #ddd;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+.view-completed {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+.progress-bar-container {
+  margin: 0.5rem 0 1rem;
+  position: relative;
+}
+
+.progress-bar {
+  height: 12px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #00ffff33, 0 0 10px #00ffff22 inset;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffff, #00ff88);
+  box-shadow: 0 0 8px #00ffcc;
+  transition: width 0.4s ease-in-out;
+}
+
+.progress-label {
+  font-size: 0.85rem;
+  margin-left: 4px;
+  color: #00ffcc;
+  font-weight: bold;
+}
